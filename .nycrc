@@ -1,0 +1,14 @@
+{
+    "exclude": [
+        "node_modules",
+        "**/*.test.js",
+        "example",
+        "coverage"
+    ],
+    "reporter": [
+        "lcov",
+        "text-summary"
+    ],
+    "cache": true,
+    "check-coverage": true
+}

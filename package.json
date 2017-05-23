@@ -1,0 +1,46 @@
+{
+  "name": "rawdraftjs-to-tree",
+  "version": "1.0.0",
+  "description": "Converts a RawDraftContentState to a tree",
+  "main": "./dist/rawdraftjs-to-tree.js",
+  "scripts": {
+    "build": "webpack",
+    "cover:integration": "nyc --all  --report-dir ./coverage/integration npm run test:integration",
+    "cover:unit": "nyc -n lib/ --all --report-dir ./coverage/unit npm run test:unit",
+    "cover": "npm run cover:integration && npm run cover:unit",
+    "lint": "eslint ./index.js ./lib",
+    "test:integration": "mocha ./index.test.js",
+    "test:unit": "mocha ./lib/*.test.js ",
+    "test": "npm run test:integration && npm run test:unit"
+  },
+  "keywords": [
+    "draftjs",
+    "tree",
+    "conversion"
+  ],
+  "author": "Aladdin Mannai",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.0",
+    "babili-webpack-plugin": "0.0.11",
+    "draft-convert": "^1.4.3",
+    "draft-js": "^0.10.0",
+    "draft-js-export-html": "^0.5.4",
+    "draftjs-to-html": "^0.7.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-config-google": "^0.7.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^3.1.0",
+    "nyc": "^8.3.0",
+    "sinon": "^1.17.6",
+    "webpack": "^2.5.1"
+  }
+}

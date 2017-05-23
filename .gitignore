@@ -1,0 +1,17 @@
+# Logs
+logs
+*.log
+*.log.*
+npm-debug*
+
+# Coverage directory used by tools like istanbul
+.nyc_output
+coverage
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Generated files
+dist
+example/output.html
