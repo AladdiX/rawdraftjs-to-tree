@@ -1,0 +1,8 @@
+example
+lib
+coverage
+*.html
+*.js
+.nyc_output
+.nycrc
+.git
