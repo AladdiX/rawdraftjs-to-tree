@@ -3,6 +3,8 @@
         "node_modules",
         "**/*.test.js",
         "example",
+        "dist",
+        "webpack.config.js",
         "coverage"
     ],
     "reporter": [
