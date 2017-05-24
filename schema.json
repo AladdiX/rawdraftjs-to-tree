@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "schema for a text tree",
+    "type": "object",
+    "required": ["component", "children"],
+    "properties": {
+        "component": {
+            "enum": ["root"]
+        },
+        "children": {
+            "$ref": "#/definitions/children"
+        }
+    },
+    "definitions": {
+        "children": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "oneOf": [{
+                    "$ref": "#/definitions/textNode"
+                }, {
+                    "$ref": "#/definitions/typeNode"
+                }]
+            }
+        },
+        "textNode": {
+            "properties": {
+                "range": {
+                    "$ref": "#/definitions/range"
+                },
+                "text": {
+                    "type": "string"
+                }
+            },
+            "required": ["range", "text"]
+        },
+        "typeNode": {
+            "properties": {
+                "range": {
+                    "$ref": "#/definitions/range"
+                },
+                "component": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "object",
+                },
+                "children": {
+                    "$ref": "#/definitions/children"
+                }
+            },
+            "required": ["component", "range", "children"]
+        },
+        "range": {
+            "properties": {
+                "offset": {
+                    "type": "number"
+                },
+                "length": {
+                    "type": "number"
+                }
+            },
+            "required": ["offset", "length"]
+        }
+    }
+}
