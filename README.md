@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/AladdiX/rawdraftjs-to-tree.svg?branch=master)](https://travis-ci.org/AladdiX/rawdraftjs-to-tree)
+
 # rawdraftjs-to-tree
 
 Converts a RawDraftContentState to a tree

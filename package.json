@@ -13,6 +13,10 @@
     "test:unit": "mocha ./lib/*.test.js ",
     "test": "npm run test:integration && npm run test:unit"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AladdiX/rawdraftjs-to-tree.git"
+  },
   "keywords": [
     "draftjs",
     "tree",
